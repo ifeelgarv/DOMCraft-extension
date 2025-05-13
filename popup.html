@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Modifier</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/icons8-agreement-94.png" alt="Web Modifier Logo">
+                <h1>SiteGenie</h1>
+            </div>
+        </header>
+        <main>
+            <div class="input-group">
+                <label for="commandInput">Enter your command:</label>
+                <textarea id="commandInput" rows="4" placeholder="e.g., change background to blue, hide all images"></textarea>
+            </div>
+            <div class="command-examples">
+                <h3>Example Commands:</h3>
+                <ul>
+                    <li><button class="example-btn" data-command="change background to light blue">Change background</button></li>
+                    <li><button class="example-btn" data-command="increase font size">Increase font size</button></li>
+                    <li><button class="example-btn" data-command="hide images">Hide images</button></li>
+                    <li><button class="example-btn" data-command="reset page">Reset page</button></li>
+                </ul>
+            </div>
+            <div class="action-buttons">
+                <button id="applyButton">Apply Changes</button>
+                <button id="resetButton">Reset Page</button>
+            </div>
+            <div id="statusMessage" class="status-message hidden">
+                <span id="statusText"></span>
+                <div class="loader hidden"></div>
+            </div>
+        </main>
+        <footer>
+            <p>Type natural language commands to modify the webpage.</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

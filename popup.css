@@ -1,0 +1,219 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    background-color: #F0F4F8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #2C3E50;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #34495E;
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5D6D7E;
+    margin-bottom: 8px;
+}
+
+textarea#commandInput {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #34495E;
+    background-color: #FDFEFF;
+    border: 1px solid #D3DCE6;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+textarea#commandInput::placeholder {
+    color: #95A5A6;
+    opacity: 1;
+}
+
+textarea#commandInput:focus {
+    border-color: #5D9CEC;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(93, 156, 236, 0.25);
+}
+
+.command-examples {
+    margin-bottom: 16px;
+    background-color: #F8FAFC;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.command-examples h3 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #5D6D7E;
+}
+
+.command-examples ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.command-examples li {
+    margin: 0;
+}
+
+.example-btn {
+    background: #EBF5FF;
+    color: #3498DB;
+    border: 1px solid #D6EAF8;
+    border-radius: 50px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.example-btn:hover {
+    background: #D6EAF8;
+    color: #2980B9;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+button#applyButton {
+    flex: 3;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #5D9CEC;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+button#applyButton:hover {
+    background-color: #4A89DC;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button#applyButton:active {
+    background-color: #3A7AC8;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button#resetButton {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5D6D7E;
+    background-color: #EEF2F5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button#resetButton:hover {
+    background-color: #D3DCE6;
+}
+
+.status-message {
+    background-color: #F8FAFC;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.success {
+    background-color: #E8F8F5;
+    color: #27AE60;
+}
+
+.error {
+    background-color: #FDEDEB;
+    color: #E74C3C;
+}
+
+.hidden {
+    display: none;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #5D9CEC;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #95A5A6;
+    margin-top: 10px;
+}
