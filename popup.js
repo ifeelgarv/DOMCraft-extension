@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Web Modifier extension loaded');
-    
     // Cache DOM elements
     const commandInput = document.getElementById('commandInput');
     const applyButton = document.getElementById('applyButton');
