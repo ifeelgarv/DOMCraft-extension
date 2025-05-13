@@ -54,7 +54,7 @@ If your commands aren't working:
 - `popup.html` - Extension popup interface
 - `popup.css` - Styling for the popup
 - `popup.js` - Main extension logic
-- `images/` - Extension icons and logo
+- `assets/` - Extension icons and logo
 
 ## License
 
