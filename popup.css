@@ -1,219 +1,314 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 500px;
-    background-color: #F0F4F8;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #2C3E50;
-    box-sizing: border-box;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  font-family: "Poppins", sans-serif;
+  color: #3f51b5;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+/* For WebKit browsers (Chrome, Safari) specific scrollbar hide */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Import Poppins font from Google Fonts (add to HTML head as well) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 .container {
-    width: 100%;
-    padding: 20px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: 90%; /* Make it slightly more responsive within the fixed width */
+  max-width: 460px; /* A bit smaller for a more compact, premium feel */
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.05); /* Softer, layered shadow */
+  overflow: hidden; /* Ensures shadows and borders look clean */
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle light border */
 }
 
 header {
-    margin-bottom: 20px;
+  margin-bottom: 25px;
+  text-align: center; /* Center header content */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Slightly more space */
+  margin-bottom: 10px; /* Space below logo */
 }
 
 .logo img {
-    width: 36px;
-    height: 36px;
+  width: 45px; /* Slightly larger logo */
+  height: 45px;
 }
 
 header h1 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #34495E;
-    margin: 0;
+  font-size: 28px; /* Larger, more impactful heading */
+  font-weight: 700; /* Bolder */
+  color: #3f51b5; /* Primary accent color */
+  margin: 0;
+  letter-spacing: -0.5px; /* Tighter letter spacing for modern look */
+  background: -webkit-linear-gradient(
+    45deg,
+    #3f51b5,
+    #673ab7
+  ); /* Gradient for title */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .input-group {
-    margin-bottom: 16px;
+  margin-bottom: 20px; /* More vertical space */
 }
 
 .input-group label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #5D6D7E;
-    margin-bottom: 8px;
+  display: block;
+  font-size: 15px; /* Slightly larger label */
+  font-weight: 600;
+  color: #757575; /* Softer gray */
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
 }
 
 textarea#commandInput {
-    width: 100%;
-    padding: 12px;
-    font-family: inherit;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #34495E;
-    background-color: #FDFEFF;
-    border: 1px solid #D3DCE6;
-    border-radius: 6px;
-    resize: vertical;
-    min-height: 80px;
-    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  padding: 15px; /* More padding for comfort */
+  font-family: inherit;
+  font-size: 16px; /* Larger text input */
+  line-height: 1.6;
+  color: #424242; /* Darker text */
+  background-color: #f7f9fc; /* Light background for input */
+  border: 1px solid #e0e0e0; /* Softer border */
+  border-radius: 10px; /* More rounded */
+  resize: vertical;
+  min-height: 90px; /* Slightly taller */
+  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); /* Inner shadow */
 }
 
 textarea#commandInput::placeholder {
-    color: #95A5A6;
-    opacity: 1;
+  color: #a0a0a0; /* Lighter placeholder */
+  opacity: 0.9;
 }
 
 textarea#commandInput:focus {
-    border-color: #5D9CEC;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(93, 156, 236, 0.25);
+  border-color: #673ab7; /* Accent color on focus */
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.15),
+    inset 0 1px 3px rgba(0, 0, 0, 0.05); /* More prominent focus shadow */
+  background-color: #ffffff; /* White background on focus */
 }
 
 .command-examples {
-    margin-bottom: 16px;
-    background-color: #F8FAFC;
-    padding: 12px;
-    border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: #f0f4f7; /* Softer background */
+  padding: 15px;
+  border-radius: 12px; /* More rounded */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02); /* Subtle inner shadow */
 }
 
 .command-examples h3 {
-    font-size: 14px;
-    margin-top: 0;
-    margin-bottom: 8px;
-    color: #5D6D7E;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 12px; /* More space */
+  color: #757575;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase for a subtle design touch */
+  letter-spacing: 0.5px;
 }
 
 .command-examples ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.command-examples li {
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Slightly larger gap */
 }
 
 .example-btn {
-    background: #EBF5FF;
-    color: #3498DB;
-    border: 1px solid #D6EAF8;
-    border-radius: 50px;
-    padding: 6px 12px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: all 0.2s;
+  background: #e3f2fd; /* Light blue background */
+  color: #3f51b5; /* Matching text color */
+  border: none; /* No border for a cleaner look */
+  border-radius: 25px; /* Pill shape */
+  padding: 8px 15px; /* More padding */
+  font-size: 13px; /* Slightly larger text */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out; /* Smooth transition */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
 .example-btn:hover {
-    background: #D6EAF8;
-    color: #2980B9;
+  background: #bbdefb; /* Darker blue on hover */
+  color: #1a237e; /* Darker text */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.example-btn:active {
+  transform: translateY(0);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Pressed effect */
 }
 
 .action-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 16px;
+  display: flex;
+  gap: 12px; /* More space between buttons */
+  margin-bottom: 20px;
 }
 
 button#applyButton {
-    flex: 3;
-    padding: 12px 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #5D9CEC;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  flex: 3;
+  padding: 14px 18px; /* More padding for a bolder button */
+  font-size: 17px; /* Larger font */
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(
+    45deg,
+    #673ab7,
+    #3f51b5
+  ); /* Primary gradient button */
+  border: none;
+  border-radius: 10px; /* More rounded */
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3); /* Prominent shadow */
 }
 
 button#applyButton:hover {
-    background-color: #4A89DC;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    45deg,
+    #5e35b1,
+    #3949ab
+  ); /* Slightly darker gradient on hover */
+  box-shadow: 0 8px 20px rgba(103, 58, 183, 0.4); /* Larger shadow on hover */
+  transform: translateY(-2px); /* Slight lift */
 }
 
 button#applyButton:active {
-    background-color: #3A7AC8;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    45deg,
+    #512da8,
+    #283593
+  ); /* Even darker on active */
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2); /* Pressed effect */
+  transform: translateY(0);
 }
 
 button#resetButton {
-    flex: 1;
-    padding: 12px 15px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #5D6D7E;
-    background-color: #EEF2F5;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.2s ease-in-out;
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #757575; /* Softer text color */
+  background-color: #e0e0e0; /* Light gray background */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 button#resetButton:hover {
-    background-color: #D3DCE6;
+  background-color: #cccccc; /* Darker gray on hover */
+  color: #424242; /* Darker text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+button#resetButton:active {
+  background-color: #b0b0b0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
 }
 
 .status-message {
-    background-color: #F8FAFC;
-    border-radius: 6px;
-    padding: 12px;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out; /* Smooth transition for status message */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e0e0e0; /* Subtle border */
 }
 
 .success {
-    background-color: #E8F8F5;
-    color: #27AE60;
+  background-color: #e8f5e9; /* Light green */
+  color: #43a047; /* Darker green */
+  border-color: #c8e6c9;
 }
 
 .error {
-    background-color: #FDEDEB;
-    color: #E74C3C;
+  background-color: #ffebee; /* Light red */
+  color: #e53935; /* Darker red */
+  border-color: #ffcdd2;
 }
 
 .hidden {
-    display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  height: 0;
+  padding: 0;
+  margin-bottom: 0;
+  overflow: hidden; /* Hide overflow when hidden */
+}
+
+.status-message:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  padding: 15px;
+  margin-bottom: 20px;
+  pointer-events: auto;
 }
 
 .loader {
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(0, 0, 0, 0.1);
-    border-top-color: #5D9CEC;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+  width: 24px; /* Slightly larger loader */
+  height: 24px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #673ab7; /* Accent color for loader */
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite; /* Faster spin */
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 footer {
-    text-align: center;
-    font-size: 12px;
-    color: #95A5A6;
-    margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #a0a0a0; /* Softer footer text */
+  margin-top: 15px; /* More space */
+  padding-top: 10px;
+  border-top: 1px dashed #eceff1; /* Dotted line separator */
 }

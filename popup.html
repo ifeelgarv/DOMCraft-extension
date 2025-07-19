@@ -1,46 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Modifier</title>
-    <link rel="stylesheet" href="popup.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOMCraft - Web Modifier</title>
+    <!-- Google Fonts - Poppins (Modern, clean font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div class="logo">
-                <img src="assets/icons8-agreement-94.png" alt="Web Modifier Logo">
-                <h1>DOMCraft</h1>
-            </div>
-        </header>
-        <main>
-            <div class="input-group">
-                <label for="commandInput">Enter your command:</label>
-                <textarea id="commandInput" rows="4" placeholder="e.g., change background to blue, hide all images"></textarea>
-            </div>
-            <div class="command-examples">
-                <h3>Example Commands:</h3>
-                <ul>
-                    <li><button class="example-btn" data-command="change background to light blue">Change background</button></li>
-                    <li><button class="example-btn" data-command="increase font size">Increase font size</button></li>
-                    <li><button class="example-btn" data-command="hide images">Hide images</button></li>
-                    <li><button class="example-btn" data-command="reset page">Reset page</button></li>
-                </ul>
-            </div>
-            <div class="action-buttons">
-                <button id="applyButton">Apply Changes</button>
-                <button id="resetButton">Reset Page</button>
-            </div>
-            <div id="statusMessage" class="status-message hidden">
-                <span id="statusText"></span>
-                <div class="loader hidden"></div>
-            </div>
-        </main>
-        <footer>
-            <p>Type natural language commands to modify the webpage.</p>
-        </footer>
+      <header>
+        <div class="logo">
+          <!-- Ensure your logo image is high quality and complements the design -->
+          <img src="assets/icons8-agreement-94.png" alt="DOMCraft Logo" />
+          <h1>DOMCraft</h1>
+        </div>
+      </header>
+      <main>
+        <div class="input-group">
+          <label for="commandInput">Unleash Your Command:</label>
+          <textarea
+            id="commandInput"
+            rows="4"
+            placeholder="e.g., change background to a soft blue, make text larger, hide images, high contrast mode..."
+          ></textarea>
+        </div>
+        <div class="command-examples">
+          <h3>Quick Commands:</h3>
+          <ul>
+            <li>
+              <button
+                class="example-btn"
+                data-command="change background to light blue"
+              >
+                Light BG
+              </button>
+            </li>
+            <li>
+              <button class="example-btn" data-command="increase font size">
+                Larger Text
+              </button>
+            </li>
+            <li>
+              <button class="example-btn" data-command="hide images">
+                Hide Images
+              </button>
+            </li>
+            <li>
+              <button class="example-btn" data-command="dark mode">
+                Dark Mode
+              </button>
+            </li>
+            <li>
+              <button class="example-btn" data-command="high contrast">
+                High Contrast
+              </button>
+            </li>
+            <li>
+              <button class="example-btn" data-command="reset page">
+                Reset All
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="action-buttons">
+          <button id="applyButton">Apply Magic ✨</button>
+          <button id="resetButton">Reset 🔄</button>
+        </div>
+        <div id="statusMessage" class="status-message hidden">
+          <span id="statusText"></span>
+          <div class="loader hidden"></div>
+        </div>
+      </main>
+      <footer>
+        <p>Your web, your rules. Powered by DOMCraft.</p>
+      </footer>
     </div>
     <script src="popup.js"></script>
-</body>
+  </body>
 </html>
