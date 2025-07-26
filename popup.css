@@ -15,13 +15,11 @@ body {
   -ms-overflow-style: none;
 }
 
-/* For WebKit browsers (Chrome, Safari) specific scrollbar hide */
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
 
-/* Import Poppins font from Google Fonts (add to HTML head as well) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 *,
@@ -31,108 +29,108 @@ body::-webkit-scrollbar {
 }
 
 .container {
-  width: 90%; /* Make it slightly more responsive within the fixed width */
-  max-width: 460px; /* A bit smaller for a more compact, premium feel */
+  width: 90%;
+  max-width: 460px;
   padding: 25px;
   background-color: #ffffff;
-  border-radius: 15px; /* More rounded corners */
+  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
-    0 4px 10px rgba(0, 0, 0, 0.05); /* Softer, layered shadow */
-  overflow: hidden; /* Ensures shadows and borders look clean */
-  border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle light border */
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 header {
   margin-bottom: 25px;
-  text-align: center; /* Center header content */
+  text-align: center;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Slightly more space */
-  margin-bottom: 10px; /* Space below logo */
+  gap: 10px;
+  margin-bottom: 10px; 
 }
 
 .logo img {
-  width: 45px; /* Slightly larger logo */
+  width: 45px;
   height: 45px;
 }
 
 header h1 {
-  font-size: 28px; /* Larger, more impactful heading */
-  font-weight: 700; /* Bolder */
-  color: #3f51b5; /* Primary accent color */
+  font-size: 28px;
+  font-weight: 700;
+  color: #3f51b5;
   margin: 0;
-  letter-spacing: -0.5px; /* Tighter letter spacing for modern look */
+  letter-spacing: -0.5px;
   background: -webkit-linear-gradient(
     45deg,
     #3f51b5,
     #673ab7
-  ); /* Gradient for title */
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .input-group {
-  margin-bottom: 20px; /* More vertical space */
+  margin-bottom: 20px;
 }
 
 .input-group label {
   display: block;
-  font-size: 15px; /* Slightly larger label */
+  font-size: 15px;
   font-weight: 600;
-  color: #757575; /* Softer gray */
+  color: #757575;
   margin-bottom: 10px;
   letter-spacing: 0.2px;
 }
 
 textarea#commandInput {
   width: 100%;
-  padding: 15px; /* More padding for comfort */
+  padding: 15px;
   font-family: inherit;
-  font-size: 16px; /* Larger text input */
+  font-size: 16px;
   line-height: 1.6;
-  color: #424242; /* Darker text */
-  background-color: #f7f9fc; /* Light background for input */
-  border: 1px solid #e0e0e0; /* Softer border */
-  border-radius: 10px; /* More rounded */
+  color: #424242;
+  background-color: #f7f9fc;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
   resize: vertical;
-  min-height: 90px; /* Slightly taller */
-  transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03); /* Inner shadow */
+  min-height: 90px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 textarea#commandInput::placeholder {
-  color: #a0a0a0; /* Lighter placeholder */
+  color: #a0a0a0;
   opacity: 0.9;
 }
 
 textarea#commandInput:focus {
-  border-color: #673ab7; /* Accent color on focus */
+  border-color: #673ab7;
   outline: none;
   box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.15),
-    inset 0 1px 3px rgba(0, 0, 0, 0.05); /* More prominent focus shadow */
-  background-color: #ffffff; /* White background on focus */
+    inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
 }
 
 .command-examples {
   margin-bottom: 20px;
-  background-color: #f0f4f7; /* Softer background */
+  background-color: #f0f4f7;
   padding: 15px;
-  border-radius: 12px; /* More rounded */
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02); /* Subtle inner shadow */
+  border-radius: 12px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .command-examples h3 {
   font-size: 14px;
   margin-top: 0;
-  margin-bottom: 12px; /* More space */
+  margin-bottom: 12px;
   color: #757575;
   font-weight: 600;
-  text-transform: uppercase; /* Uppercase for a subtle design touch */
+  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -142,57 +140,57 @@ textarea#commandInput:focus {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Slightly larger gap */
+  gap: 10px;
 }
 
 .example-btn {
-  background: #e3f2fd; /* Light blue background */
-  color: #3f51b5; /* Matching text color */
-  border: none; /* No border for a cleaner look */
-  border-radius: 25px; /* Pill shape */
-  padding: 8px 15px; /* More padding */
-  font-size: 13px; /* Slightly larger text */
+  background: #e3f2fd;
+  color: #3f51b5;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 15px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s ease-in-out; /* Smooth transition */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .example-btn:hover {
-  background: #bbdefb; /* Darker blue on hover */
-  color: #1a237e; /* Darker text */
-  transform: translateY(-2px); /* Slight lift on hover */
+  background: #bbdefb;
+  color: #1a237e;
+  transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .example-btn:active {
   transform: translateY(0);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Pressed effect */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .action-buttons {
   display: flex;
-  gap: 12px; /* More space between buttons */
+  gap: 12px;
   margin-bottom: 20px;
 }
 
 button#applyButton {
   flex: 3;
-  padding: 14px 18px; /* More padding for a bolder button */
-  font-size: 17px; /* Larger font */
+  padding: 14px 18px;
+  font-size: 17px;
   font-weight: 600;
   color: #ffffff;
   background: linear-gradient(
     45deg,
     #673ab7,
     #3f51b5
-  ); /* Primary gradient button */
+  );
   border: none;
-  border-radius: 10px; /* More rounded */
+  border-radius: 10px;
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3); /* Prominent shadow */
+  box-shadow: 0 5px 15px rgba(103, 58, 183, 0.3);
 }
 
 button#applyButton:hover {
@@ -200,9 +198,9 @@ button#applyButton:hover {
     45deg,
     #5e35b1,
     #3949ab
-  ); /* Slightly darker gradient on hover */
-  box-shadow: 0 8px 20px rgba(103, 58, 183, 0.4); /* Larger shadow on hover */
-  transform: translateY(-2px); /* Slight lift */
+  );
+  box-shadow: 0 8px 20px rgba(103, 58, 183, 0.4);
+  transform: translateY(-2px);
 }
 
 button#applyButton:active {
@@ -210,8 +208,8 @@ button#applyButton:active {
     45deg,
     #512da8,
     #283593
-  ); /* Even darker on active */
-  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2); /* Pressed effect */
+  );
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
   transform: translateY(0);
 }
 
@@ -220,8 +218,8 @@ button#resetButton {
   padding: 14px 18px;
   font-size: 17px;
   font-weight: 600;
-  color: #757575; /* Softer text color */
-  background-color: #e0e0e0; /* Light gray background */
+  color: #757575;
+  background-color: #e0e0e0;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -231,8 +229,8 @@ button#resetButton {
 }
 
 button#resetButton:hover {
-  background-color: #cccccc; /* Darker gray on hover */
-  color: #424242; /* Darker text */
+  background-color: #cccccc;
+  color: #424242;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
 }
@@ -253,20 +251,20 @@ button#resetButton:active {
   justify-content: space-between;
   font-size: 15px;
   font-weight: 500;
-  transition: all 0.3s ease-in-out; /* Smooth transition for status message */
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e0e0e0; /* Subtle border */
+  border: 1px solid #e0e0e0;
 }
 
 .success {
-  background-color: #e8f5e9; /* Light green */
-  color: #43a047; /* Darker green */
+  background-color: #e8f5e9;
+  color: #43a047;
   border-color: #c8e6c9;
 }
 
 .error {
-  background-color: #ffebee; /* Light red */
-  color: #e53935; /* Darker red */
+  background-color: #ffebee;
+  color: #e53935;
   border-color: #ffcdd2;
 }
 
@@ -277,7 +275,7 @@ button#resetButton:active {
   height: 0;
   padding: 0;
   margin-bottom: 0;
-  overflow: hidden; /* Hide overflow when hidden */
+  overflow: hidden;
 }
 
 .status-message:not(.hidden) {
@@ -290,12 +288,12 @@ button#resetButton:active {
 }
 
 .loader {
-  width: 24px; /* Slightly larger loader */
+  width: 24px;
   height: 24px;
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top-color: #673ab7; /* Accent color for loader */
+  border-top-color: #673ab7;
   border-radius: 50%;
-  animation: spin 0.8s linear infinite; /* Faster spin */
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
@@ -307,8 +305,8 @@ button#resetButton:active {
 footer {
   text-align: center;
   font-size: 12px;
-  color: #a0a0a0; /* Softer footer text */
-  margin-top: 15px; /* More space */
+  color: #a0a0a0;
+  margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px dashed #eceff1; /* Dotted line separator */
+  border-top: 1px dashed #eceff1;
 }

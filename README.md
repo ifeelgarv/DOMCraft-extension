@@ -56,10 +56,6 @@ If your commands aren't working:
 - `popup.js` - Main extension logic
 - `assets/` - Extension icons and logo
 
-## License
-
-MIT License
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
