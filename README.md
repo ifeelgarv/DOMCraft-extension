@@ -2,7 +2,7 @@
 
 A Chrome extension that allows you to modify websites using natural language commands
 
-![DOMCraft Preview](https://github.com/user-attachments/assets/a1386966-403a-48c6-9ae1-a8a0a849e313)
+https://github.com/user-attachments/assets/a1386966-403a-48c6-9ae1-a8a0a849e313
 
 ## Features
 
