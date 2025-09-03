@@ -1,6 +1,8 @@
 # Natural Language Web Modifier
 
-A Chrome extension that allows you to modify websites using natural language commands.
+A Chrome extension that allows you to modify websites using natural language commands
+
+![Extension](https://streamable.com/07f911)
 
 ## Features
 
